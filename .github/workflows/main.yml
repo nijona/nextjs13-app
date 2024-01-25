@@ -24,7 +24,7 @@ jobs:
         uses: burnett01/rsync-deployments@5.1
         with:
           switches: -avzr --delete
-          path: ./*
+          path: ./
           remote_path: /var/www/nextjs13-app/
           remote_host: ec2-18-134-146-24.eu-west-2.compute.amazonaws.com
           remote_user: ubuntu
