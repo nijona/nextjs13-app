@@ -2,7 +2,7 @@ import { Comment, Like, User } from "@prisma/client";
 import Thread from "./Thread";
 
 async function getPost(postId: string) {
-  const res = await fetch(`${process.env.http://localhost:3000}/api/posts/${postId}`, {
+  const res = await fetch(`http://localhost:3000/api/posts/${postId}`, {
     cache: "no-store",
   });
   // console.log(res);
