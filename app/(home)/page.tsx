@@ -1,4 +1,6 @@
 import HomePage from "./HomePage";
+import { headers } from 'next/headers'
+
 
 async function getStars() {
   const res = await fetch(
@@ -11,7 +13,7 @@ async function getStars() {
 
 export default async function Home() {
   const githubStars = await getStars();
-
+  console.log(headers());
   return (
     <main>
       <HomePage numStars={githubStars} />
